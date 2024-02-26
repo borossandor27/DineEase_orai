@@ -1,0 +1,14 @@
+:root {
+    --custom-background-color: rgba(124,58,237,1);
+    --custom-background-color-hover: rgba(124,58,237,1);
+  }
+
+  .btn-primary {
+    background-color: var(--custom-background-color);
+    border-color: var(--custom-border-color);
+  }
+  .btn-primary:hover {
+    background-color: var(--custom-background-color-hover);
+    border-color: var(--custom-border-color-hover);
+
+  }
