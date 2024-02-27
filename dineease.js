@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // A függvényeket a DOM betöltődése után definiáljuk, hogy biztosan létezzenek a szükséges elemek
     function init() {
 
-        const top3 = document.getElementById('top3');
+        const top3 = document.getElementById('top3restorants');
         top3.addEventListener('load', getTop3());
     };
     async function getTop3() {
@@ -18,20 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
         top3.innerHTML = html; //-- frissíti a DOM-ot, megjeleníti a kártyákat
     }
     function getRestoranteCard(restoranteData) {
-        console.log(restoranteData);
         let html = `<div class="card col-lg-4 col-md-6 col-sm-12 top3card">
                              <img src="${restoranteData.image}" class="card-img-top" alt="${restoranteData.name}">
                              <div class="card-body">
                                  <h5
                                      class="card-title d-flex justify-content-between"><span
-                                         class="m-4">"${restoranteData.name}"</span><span
-                                         class="m-4"><img src="images/star.png"
-                                             alt
-                                             srcset><img src="images/star.png"
-                                             alt
-                                             srcset><img src="images/star.png"
-                                             alt
-                                             srcset></span></h5>
+                                         class="m-4">"${restoranteData.name}"</span>
+                                         <span class="m-4">${rate(restoranteData.rate)}</span></h5>
                                  <p class="card-text">Some quick example text to
                                      build on the card title and make up the bulk
                                      of
@@ -40,8 +33,19 @@ document.addEventListener('DOMContentLoaded', function () {
                                      restaurant</a>
                              </div>
                          </div>`;
-                         console.log(html);
         return html;
+    }
+    function rate(rate) {
+        let stars = '';
+        for (let index = 0; index < 5; index++) {
+            if (index >= rate-1) {
+                stars += '<img src="images/star.png" alt="star" class="grey">';
+                continue;
+            } else {
+                stars += '<img src="images/star.png" alt="star">';
+            }
+        }
+        return stars;
     }
     init();
 

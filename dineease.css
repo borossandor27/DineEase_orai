@@ -105,3 +105,6 @@
 #testimonials {
   background-color: var(--background-color-light);
 }
+.grey {
+  filter: grayscale(100%);
+}
