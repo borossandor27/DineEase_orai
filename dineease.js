@@ -18,13 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
         top3.innerHTML = html; //-- frissíti a DOM-ot, megjeleníti a kártyákat
     }
     function getRestoranteCard(restoranteData) {
-        let html = `<div class="col-lg-4 col-md-6 col-sm-12">
+        let html = `<div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
                         <div class="card top3card">
                              <img src="data\\${restoranteData.image}" class="card-img-top" alt="${restoranteData.name}">
                              <div class="card-body">
                                  <h5
                                      class="card-title d-flex justify-content-between"><span
-                                         class="col-4">"${restoranteData.name}"</span>
+                                         class="col-4">${restoranteData.name.trim()}</span>
                                          <span class="col-4">${rate(restoranteData.rating)}</span></h5>
                                  <p class="card-text">${restoranteData.description}</p>
                                  <a href="#" class="btn btn-primary">View

@@ -4,8 +4,24 @@
   --border-color: rgba(124, 58, 237, 1);
   --border-color-hover: rgba(124, 58, 237, 1);
   --background-color-light: #ede9fe;
+  --circle-diameter:360px;
 }
-
+#navbarSupportedContent {
+  background-image: url(images/nav_background.png);
+  background-repeat: repeat-y;
+}
+.card-img-top {
+  height: 25vh;
+  object-fit: cover;
+}
+.heroDineease{
+  background-image: url(images/hero_background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
 .btn-primary {
   background-color: var(--background-color);
   border-color: var(--border-color);
@@ -69,16 +85,16 @@
     z-index: -5000;
     content: '';
     position: absolute;
-    width: 140px;
+    width: var(--circle-diameter);
     /* Állítsd be a kör szélességét */
-    height: 140px;
+    height: var(--circle-diameter); 
     /* Állítsd be a kör magasságát */
     border-radius: 50%;
     /* Kerekített szélek kialakítása */
     background-color: var(--background-color-light);
     /* Válassz egy kör színt */
-    bottom: -50;
-    left: 0;
+    bottom: -50px;
+    left: -20px;
   }
 
   /* A felső jobb sarkon lévő kör */
@@ -86,9 +102,9 @@
     z-index: -5000;
     content: '';
     position: absolute;
-    width: 140px;
+    width: var(--circle-diameter);
     /* Állítsd be a kör szélességét */
-    height: 140px;
+    height: var(--circle-diameter);
     /* Állítsd be a kör magasságát */
     border-radius: 50%;
     /* Kerekített szélek kialakítása */
@@ -107,4 +123,12 @@
 }
 .grey {
   filter: grayscale(100%);
+}
+
+#top3restorants {
+  position: relative;
+  width: 80%;
+  /* Adj megfelelő szélességet a div-nek */
+  height: auto;
+  /* Adj megfelelő magasságot a div-nek */
 }
