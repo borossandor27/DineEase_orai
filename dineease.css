@@ -45,35 +45,45 @@
     background-position: 100% 100%;
     right: -.2em;
   }  
+#heroDineease {
+  margin-top: 130px;
+}
+
+  /* top 3 éttermet tartalmazó div formázása */
   #top3 {
     position: relative;
     width: auto; /* Adj megfelelő szélességet a div-nek */
     height: auto; /* Adj megfelelő magasságot a div-nek */
-    background-color: #f00; /* Válassz egy háttérszínt */
+    
   
     /* Az alsó bal sarkon lévő kör */
     &::before {
+      z-index: -5000;
       content: '';
       position: absolute;
-      width: 20px; /* Állítsd be a kör szélességét */
-      height: 20px; /* Állítsd be a kör magasságát */
+      width: 140px; /* Állítsd be a kör szélességét */
+      height: 140px; /* Állítsd be a kör magasságát */
       border-radius: 50%; /* Kerekített szélek kialakítása */
-      background-color: #00f; /* Válassz egy kör színt */
+      background-color: var(--background-color-light); /* Válassz egy kör színt */
       bottom: 0;
       left: 0;
     }
   
     /* A felső jobb sarkon lévő kör */
     &::after {
+      z-index: -5000;
       content: '';
       position: absolute;
-      width: 20px; /* Állítsd be a kör szélességét */
-      height: 20px; /* Állítsd be a kör magasságát */
+      width: 140px; /* Állítsd be a kör szélességét */
+      height: 140px; /* Állítsd be a kör magasságát */
       border-radius: 50%; /* Kerekített szélek kialakítása */
-      background-color: #00f; /* Válassz egy kör színt */
+      background-color: var(--background-color-light); /* Válassz egy kör színt */
       top: 0;
       right: 0;
     }
+
+    /* véleményeket tartalmazó div formázása */
+
   }
   
   

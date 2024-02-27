@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     function getRestoranteCard(restoranteData) {
         let html = '';
-        html += `<div class="card col-lg-4 col-md-6 col-sm-12">
+        html += `<div class="card col-lg-4 col-md-6 col-sm-12 top3card">
                              <img src="${restoranteData.image}" class="card-img-top" alt="${restoranteData.name}">
                              <div class="card-body">
                                  <h5
