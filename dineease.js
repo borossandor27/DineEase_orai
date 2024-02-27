@@ -4,22 +4,22 @@ document.addEventListener('DOMContentLoaded', function () {
     function init() {
 
         const top3 = document.getElementById('top3');
-        top3.addEventListener('load', getTop3);
+        top3.addEventListener('load', getTop3());
     };
     async function getTop3() {
-        alert('hello');
         const response = await fetch('data/top-rated-restauransts.json');
-        const data = await response.json();
+        const data = await response.json(); // response.json() returns a promise
         console.log(data);
-        let html = '';
+        let html = ''; // create a variable to store the HTML
         for (let index = 0; index < data.length; index++) {
             html += getRestoranteCard(data[index]);
             
         }
+        top3.innerHTML = html; //-- frissíti a DOM-ot, megjeleníti a kártyákat
     }
     function getRestoranteCard(restoranteData) {
-        let html = '';
-        html += `<div class="card col-lg-4 col-md-6 col-sm-12 top3card">
+        console.log(restoranteData);
+        let html = `<div class="card col-lg-4 col-md-6 col-sm-12 top3card">
                              <img src="${restoranteData.image}" class="card-img-top" alt="${restoranteData.name}">
                              <div class="card-body">
                                  <h5
@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                      restaurant</a>
                              </div>
                          </div>`;
+                         console.log(html);
         return html;
     }
     init();
