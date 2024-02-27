@@ -1,90 +1,107 @@
 :root {
-    --background-color: rgba(124,58,237,1);
-    --background-color-hover: rgba(124,58,237,1);
-    --border-color: rgba(124,58,237,1);
-    --border-color-hover: rgba(124,58,237,1);
-    --background-color-light:#ede9fe;
-  }
+  --background-color: rgba(124, 58, 237, 1);
+  --background-color-hover: rgba(124, 58, 237, 1);
+  --border-color: rgba(124, 58, 237, 1);
+  --border-color-hover: rgba(124, 58, 237, 1);
+  --background-color-light: #ede9fe;
+}
 
-  .btn-primary {
-    background-color: var(--background-color);
-    border-color: var(--border-color);
-  }
-  .btn-primary:hover {
-    background-color: var(--background-color-hover);
-    border-color: var(--border-color-hover);
+.btn-primary {
+  background-color: var(--background-color);
+  border-color: var(--border-color);
+}
 
-  }
-    .tape {
-    background-color: hsla(0,0%,100%,.2);
-    box-shadow: inset 0 0 1em .5em hsla(0,0%,100%,.1);
-    height: 3em;
-    position: absolute;
-    transform: rotate(-30deg);
-    width: 9em;
-    -webkit-filter: drop-shadow(0 1px 1px hsla(0,0%,0%,.3));
-  }
-  .tape:after,
-  .tape:before {
-    background-size: .4em .4em;
-    bottom: 0;
-    content: '';
-    position: absolute;
-    top: 0;
-    width: .2em;
-  }
-  .tape:after {
-    background-image: linear-gradient(45deg, transparent 50%, hsla(0,0%,100%,.3) 50%),
-                      linear-gradient(-45deg, transparent 50%, hsla(0,0%,100%,.3) 50%);
-    background-position: 0 100%;
-    left: -.2em;
-  }
-  .tape:before {
-    background-image: linear-gradient(135deg, transparent 50%, hsla(0,0%,100%,.3) 50%),
-                      linear-gradient(-135deg, transparent 50%, hsla(0,0%,100%,.3) 50%);
-    background-position: 100% 100%;
-    right: -.2em;
-  }  
+.btn-primary:hover {
+  background-color: var(--background-color-hover);
+  border-color: var(--border-color-hover);
+
+}
+
+.tape {
+  background-color: hsla(0, 0%, 100%, .2);
+  box-shadow: inset 0 0 1em .5em hsla(0, 0%, 100%, .1);
+  height: 3em;
+  position: absolute;
+  transform: rotate(-30deg);
+  width: 9em;
+  -webkit-filter: drop-shadow(0 1px 1px hsla(0, 0%, 0%, .3));
+}
+
+.tape:after,
+.tape:before {
+  background-size: .4em .4em;
+  bottom: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: .2em;
+}
+
+.tape:after {
+  background-image: linear-gradient(45deg, transparent 50%, hsla(0, 0%, 100%, .3) 50%),
+    linear-gradient(-45deg, transparent 50%, hsla(0, 0%, 100%, .3) 50%);
+  background-position: 0 100%;
+  left: -.2em;
+}
+
+.tape:before {
+  background-image: linear-gradient(135deg, transparent 50%, hsla(0, 0%, 100%, .3) 50%),
+    linear-gradient(-135deg, transparent 50%, hsla(0, 0%, 100%, .3) 50%);
+  background-position: 100% 100%;
+  right: -.2em;
+}
+
 #heroDineease {
   margin-top: 130px;
 }
 
-  /* top 3 éttermet tartalmazó div formázása */
-  #top3 {
-    position: relative;
-    width: auto; /* Adj megfelelő szélességet a div-nek */
-    height: auto; /* Adj megfelelő magasságot a div-nek */
-    
-  
-    /* Az alsó bal sarkon lévő kör */
-    &::before {
-      z-index: -5000;
-      content: '';
-      position: absolute;
-      width: 140px; /* Állítsd be a kör szélességét */
-      height: 140px; /* Állítsd be a kör magasságát */
-      border-radius: 50%; /* Kerekített szélek kialakítása */
-      background-color: var(--background-color-light); /* Válassz egy kör színt */
-      bottom: 0;
-      left: 0;
-    }
-  
-    /* A felső jobb sarkon lévő kör */
-    &::after {
-      z-index: -5000;
-      content: '';
-      position: absolute;
-      width: 140px; /* Állítsd be a kör szélességét */
-      height: 140px; /* Állítsd be a kör magasságát */
-      border-radius: 50%; /* Kerekített szélek kialakítása */
-      background-color: var(--background-color-light); /* Válassz egy kör színt */
-      top: 0;
-      right: 0;
-    }
+/* top 3 éttermet tartalmazó div formázása */
+#top3 {
+  position: relative;
+  width: auto;
+  /* Adj megfelelő szélességet a div-nek */
+  height: auto;
+  /* Adj megfelelő magasságot a div-nek */
 
-    /* véleményeket tartalmazó div formázása */
 
+  /* Az alsó bal sarkon lévő kör */
+  &::before {
+    z-index: -5000;
+    content: '';
+    position: absolute;
+    width: 140px;
+    /* Állítsd be a kör szélességét */
+    height: 140px;
+    /* Állítsd be a kör magasságát */
+    border-radius: 50%;
+    /* Kerekített szélek kialakítása */
+    background-color: var(--background-color-light);
+    /* Válassz egy kör színt */
+    bottom: -50;
+    left: 0;
   }
-  
-  
-  
+
+  /* A felső jobb sarkon lévő kör */
+  &::after {
+    z-index: -5000;
+    content: '';
+    position: absolute;
+    width: 140px;
+    /* Állítsd be a kör szélességét */
+    height: 140px;
+    /* Állítsd be a kör magasságát */
+    border-radius: 50%;
+    /* Kerekített szélek kialakítása */
+    background-color: var(--background-color-light);
+    /* Válassz egy kör színt */
+    top: 0;
+    right: 0;
+  }
+
+
+}
+
+/* véleményeket tartalmazó div formázása */
+#testimonials {
+  background-color: var(--background-color-light);
+}
