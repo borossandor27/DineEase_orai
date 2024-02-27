@@ -18,27 +18,26 @@ document.addEventListener('DOMContentLoaded', function () {
         top3.innerHTML = html; //-- frissíti a DOM-ot, megjeleníti a kártyákat
     }
     function getRestoranteCard(restoranteData) {
-        let html = `<div class="card col-lg-4 col-md-6 col-sm-12 top3card">
-                             <img src="${restoranteData.image}" class="card-img-top" alt="${restoranteData.name}">
+        let html = `<div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="card top3card">
+                             <img src="data\\${restoranteData.image}" class="card-img-top" alt="${restoranteData.name}">
                              <div class="card-body">
                                  <h5
                                      class="card-title d-flex justify-content-between"><span
-                                         class="m-4">"${restoranteData.name}"</span>
-                                         <span class="m-4">${rate(restoranteData.rate)}</span></h5>
-                                 <p class="card-text">Some quick example text to
-                                     build on the card title and make up the bulk
-                                     of
-                                     the card's content.</p>
+                                         class="col-4">"${restoranteData.name}"</span>
+                                         <span class="col-4">${rate(restoranteData.rating)}</span></h5>
+                                 <p class="card-text">${restoranteData.description}</p>
                                  <a href="#" class="btn btn-primary">View
                                      restaurant</a>
                              </div>
-                         </div>`;
+                         </div>
+                    </div>`;
         return html;
     }
     function rate(rate) {
         let stars = '';
         for (let index = 0; index < 5; index++) {
-            if (index >= rate-1) {
+            if (index > rate-1) {
                 stars += '<img src="images/star.png" alt="star" class="grey">';
                 continue;
             } else {
