@@ -35,7 +35,7 @@
 
 .rotated {
   /* tg α = 70/556 = 0.1254 = 7.131 deg */
-  --degree: 7.131deg;
+  --degree: 30deg;
   width: 556px;
   height: 70px;
   transform: rotate(var(--degree)) skew(180-var(--degree)); /* Equal to rotateZ(45deg) */
